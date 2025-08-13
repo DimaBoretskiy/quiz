@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: quizgo-bot
+    env: node
+    buildCommand: npm install
+    startCommand: node bot-server-polling.cjs
+    envVars:
+      - key: NODE_ENV
+        value: production
+    plan: free
